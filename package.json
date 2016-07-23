@@ -1,0 +1,23 @@
+{
+  "name": "lcg",
+  "version": "0.1.0",
+  "description": "LCG Random Number Generator",
+  "main": "out/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "author": "Sam Rijs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:srijs/node-lcg.git"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.7"
+  },
+  "typings": "out/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/srijs/node-lcg/issues"
+  }
+}
