@@ -6,13 +6,15 @@ console.log('seed:', seed);
 
 let random = new Random(seed);
 
+function getBetween(min: number, max: number): number {
+  random = random.next();
+  return random.getIntegerBetween(min, max);
+}
+
 function genPair(max: number): [number, number] {
-  const nextRandom = random.next();
-  const nextNextRandom = nextRandom.next();
-  random = nextNextRandom;
   return [
-    nextRandom.getIntegerBetween(0, max),
-    nextNextRandom.getIntegerBetween(0, max)
+    getBetween(0, max),
+    getBetween(0, max)
   ];
 }
 
@@ -35,3 +37,14 @@ function getAndCmpPairs(max: number): void {
 for (let i = 1; i < 15; i++) {
   getAndCmpPairs(i);
 }
+
+function rollDice() {
+  const diceDist = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0};
+  for (let i = 0; i < 1000; i++) {
+    const outcome = getBetween(1, 6);
+    diceDist[outcome]++;
+  }
+  console.log('rolling dice:', diceDist);
+}
+
+rollDice();

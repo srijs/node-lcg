@@ -18,6 +18,6 @@ export class Random {
   }
 
   getIntegerBetween(min: number, max: number) {
-    return Math.round((this._value / M) * (max - min)) + min;
+    return Math.floor((this._value / M) * (1 + max - min)) + min;
   }
 }
