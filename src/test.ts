@@ -39,7 +39,7 @@ for (let i = 1; i < 15; i++) {
 }
 
 function rollDice() {
-  const diceDist = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0};
+  const diceDist: {[key: number]: number} = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0};
   for (let i = 0; i < 1000; i++) {
     const outcome = getBetween(1, 6);
     diceDist[outcome]++;
