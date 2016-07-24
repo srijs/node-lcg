@@ -1,6 +1,6 @@
 {
   "name": "lcg",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "LCG Random Number Generator",
   "main": "out/index.js",
   "scripts": {
