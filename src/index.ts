@@ -16,4 +16,8 @@ export class Random {
   get(): number {
     return this._value / M;
   }
+
+  getIntegerBetween(min: number, max: number) {
+    return Math.round((this._value / M) * (max - min)) + min;
+  }
 }
