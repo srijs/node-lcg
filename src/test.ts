@@ -44,7 +44,7 @@ function rollDice() {
     const outcome = getBetween(1, 6);
     diceDist[outcome]++;
   }
-  console.log('rolling dice:', diceDist);
+  return diceDist;
 }
 
-rollDice();
+console.log('rolling dice:', rollDice());
