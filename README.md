@@ -18,7 +18,7 @@ npm install lcg
 ```js
 import {Random} from 'lcg';
 
-const seed = Math.random() * (1 << 32);
+const seed = Math.random() * (Math.pow(2, 31) - 2);
 
 const random = new Random(seed);
 const value = random.get();
